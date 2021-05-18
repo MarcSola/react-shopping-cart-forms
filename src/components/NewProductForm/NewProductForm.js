@@ -108,27 +108,30 @@ class NewProductForm extends Component {
   }
 
   handleAuthorFirstNameInputChange(event) {
-    this.setState({
+    this.setState((prevState) => ({
       author: {
+        ...prevState.author,
         firstName: event.target.value,
       },
-    });
+    }));
   }
 
   handleAuthorLastNameInputChange(event) {
-    this.setState({
+    this.setState((prevState) => ({
       author: {
+        ...prevState.author,
         lastName: event.target.value,
       },
-    });
+    }));
   }
 
   handleAuthorEmailInputChange(event) {
-    this.setState({
+    this.setState((prevState) => ({
       author: {
+        ...prevState.author,
         email: event.target.value,
       },
-    });
+    }));
   }
 
   render() {
